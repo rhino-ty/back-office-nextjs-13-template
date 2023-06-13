@@ -16,13 +16,13 @@ export default function Sidebar() {
             <div className="flex justify-center">
               <Link
                 href="/"
-                className="w-20 mx-auto -mt-1 mb-4 p-1 text-center"
+                className="w-20 mx-auto -mt-1 mb-4 p-1 text-center group"
               >
                 {/* 다크 적용 */}
                 {/* <HomeRoundedIcon className="dark:text-gray-300 dark:hover:text-white" />
           <label className="dark:text-gray-800 dark:hover:text-white"> */}
-                <HomeRoundedIcon className="w-14 h-8 text-gray-300 hover:text-gray-100 transition-colors" />
-                <label className="text-xs cursor-pointer text-gray-300 relative items-center justify-center hover:text-gray-100 transition-colors">
+                <HomeRoundedIcon className="w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors" />
+                <label className="text-xs cursor-pointer text-gray-300 relative items-center justify-center group-hover:text-gray-100 transition-colors">
                   Home
                 </label>
               </Link>
