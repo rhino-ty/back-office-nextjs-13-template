@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 다크 적용 */
+/* <HomeRoundedIcon className="dark:text-gray-300 dark:hover:text-white" />
+  <label className="dark:text-gray-800 dark:hover:text-white"> */
+
+.sidebar-link {
+  @apply w-20 mx-auto -mt-1 mb-4 p-1 text-center;
+}
+
+.icon-style {
+  @apply w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors rounded-2xl bg-opacity-0 bg-gray-700;
+}
+
+.label-style {
+  @apply text-xs cursor-pointer text-gray-300 relative items-center justify-center transition-colors;
+}

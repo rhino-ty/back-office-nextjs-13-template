@@ -6,6 +6,7 @@ import CodeIcon from "@mui/icons-material/Code";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import PaletteOutlinedIcon from "@mui/icons-material/PaletteOutlined";
 import Link from "next/link";
+import "./sidebar.css";
 
 export default function Sidebar() {
   return (
@@ -14,39 +15,53 @@ export default function Sidebar() {
         <ul>
           <li>
             <div className="flex justify-center">
-              <Link
-                href="/"
-                className="w-20 mx-auto -mt-1 mb-4 p-1 text-center group"
-              >
-                {/* 다크 적용 */}
-                {/* <HomeRoundedIcon className="dark:text-gray-300 dark:hover:text-white" />
-          <label className="dark:text-gray-800 dark:hover:text-white"> */}
-                <HomeRoundedIcon className="w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors rounded-2xl bg-opacity-0 bg-gray-700 group-hover:bg-opacity-60 group-hover:scale-105" />
-                <label className="text-xs cursor-pointer text-gray-300 relative items-center justify-center group-hover:text-gray-100 transition-colors">
+              <Link href="/" className="sidebar-link group">
+                <HomeRoundedIcon className="icon-style group-hover:bg-opacity-60 group-hover:scale-105" />
+                <label className="label-style group-hover:text-gray-100 ">
                   Home
                 </label>
               </Link>
             </div>
           </li>
-          <li className="text-center">
-            <Link href="/get-started">
-              <AppsRoundedIcon className="h-7 w-7 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors" />
-            </Link>
+          <li>
+            <div className="flex justify-center">
+              <Link href="/get-started" className="sidebar-link group">
+                <AppsRoundedIcon className="icon-style group-hover:bg-opacity-60 group-hover:scale-105" />
+                <label className="label-style group-hover:text-gray-100 ">
+                  Home
+                </label>
+              </Link>
+            </div>
           </li>
-          <li className="text-center">
-            <Link href="/develop">
-              <CodeIcon className="h-7 w-7 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors" />
-            </Link>
+          <li>
+            <div className="flex justify-center">
+              <Link href="/develop" className="sidebar-link group">
+                <CodeIcon className="icon-style group-hover:bg-opacity-60 group-hover:scale-105" />
+                <label className="label-style group-hover:text-gray-100 ">
+                  Develop
+                </label>
+              </Link>
+            </div>
           </li>
-          <li className="text-center">
-            <Link href="/foundations">
-              <BookOutlinedIcon className="h-7 w-7 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors" />
-            </Link>
+          <li>
+            <div className="flex justify-center">
+              <Link href="/foundations" className="sidebar-link group">
+                <BookOutlinedIcon className="icon-style group-hover:bg-opacity-60 group-hover:scale-105" />
+                <label className="label-style group-hover:text-gray-100 ">
+                  Foundations
+                </label>
+              </Link>
+            </div>
           </li>
-          <li className="text-center">
-            <Link href="styles">
-              <PaletteOutlinedIcon className="h-7 w-7 text-gray-500 dark:text-gray-300 mx-auto hover:text-gray-800 dark:hover:text-white transition-colors" />
-            </Link>
+          <li>
+            <div className="flex justify-center">
+              <Link href="/styles" className="sidebar-link group">
+                <PaletteOutlinedIcon className="icon-style group-hover:bg-opacity-60 group-hover:scale-105" />
+                <label className="label-style group-hover:text-gray-100 ">
+                  Styles
+                </label>
+              </Link>
+            </div>
           </li>
         </ul>
       </div>
