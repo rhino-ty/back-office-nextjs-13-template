@@ -24,37 +24,29 @@ export default function DarkModeToggleButton() {
     setHovered(false);
   };
 
-  const [mounted, setMounted] = useState<boolean>(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
-    mounted && (
-      <button
-        type="button"
-        className="w-12 h-12"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        {/* 라이트모드 */}
-        {theme === "light" &&
-          (hovered ? (
-            <LightModeIcon className={color} />
-          ) : (
-            <LightModeOutlinedIcon className={color} />
-          ))}
+    <button
+      type="button"
+      className="w-12 h-12"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* 라이트모드 */}
+      {theme === "light" &&
+        (hovered ? (
+          <LightModeIcon className={color} />
+        ) : (
+          <LightModeOutlinedIcon className={color} />
+        ))}
 
-        {/* 다크모드 */}
-        {theme === "dark" &&
-          (hovered ? (
-            <DarkModeIcon className={color} />
-          ) : (
-            <DarkModeOutlinedIcon className={color} />
-          ))}
-      </button>
-    )
+      {/* 다크모드 */}
+      {theme === "dark" &&
+        (hovered ? (
+          <DarkModeIcon className={color} />
+        ) : (
+          <DarkModeOutlinedIcon className={color} />
+        ))}
+    </button>
   );
 }
