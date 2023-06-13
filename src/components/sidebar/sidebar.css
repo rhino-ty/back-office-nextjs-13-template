@@ -11,9 +11,11 @@
 }
 
 .icon-style {
-  @apply w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors rounded-2xl bg-opacity-0 bg-gray-700;
+  @apply w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors rounded-2xl bg-opacity-0 bg-gray-700
+  dark:text-gray-300 dark:hover:text-white;
 }
 
 .label-style {
-  @apply text-xs cursor-pointer text-gray-300 relative items-center justify-center transition-colors;
+  @apply text-xs cursor-pointer text-gray-300 relative items-center justify-center transition-colors
+  dark:text-gray-300 dark:hover:text-white;
 }
