@@ -7,7 +7,7 @@
 }
 
 .icon-style {
-  @apply w-14 h-8 text-gray-800 transition-colors rounded-2xl bg-opacity-0 bg-gray-300
+  @apply w-14 mb-1 text-gray-800 transition-colors rounded-2xl bg-opacity-0 bg-gray-300
   dark:text-gray-300 dark:bg-opacity-0 dark:bg-gray-700;
 }
 
