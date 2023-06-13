@@ -21,7 +21,7 @@ export default function Sidebar() {
                 {/* 다크 적용 */}
                 {/* <HomeRoundedIcon className="dark:text-gray-300 dark:hover:text-white" />
           <label className="dark:text-gray-800 dark:hover:text-white"> */}
-                <HomeRoundedIcon className="w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors" />
+                <HomeRoundedIcon className="w-14 h-8 text-gray-300 group-hover:text-gray-100 transition-colors rounded-2xl bg-opacity-0 bg-gray-700 group-hover:bg-opacity-60 group-hover:scale-105" />
                 <label className="text-xs cursor-pointer text-gray-300 relative items-center justify-center group-hover:text-gray-100 transition-colors">
                   Home
                 </label>
