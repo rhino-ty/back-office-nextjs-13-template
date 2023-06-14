@@ -12,7 +12,7 @@ import "./sidebar.css";
 export default function Sidebar() {
   return (
     <nav className="flex flex-col justify-between h-screen bg-gray-200 dark:bg-gray-800 fixed">
-      <div className="flex flex-col w-20 mt-5">
+      <div className="flex flex-col w-[88px] mt-5">
         <ul>
           <li>
             <div className="flex justify-center">
