@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-50;
+  @apply text-gray-900 dark:text-gray-50;
+  @layer body-bg dark:body-bg-dark;
 }

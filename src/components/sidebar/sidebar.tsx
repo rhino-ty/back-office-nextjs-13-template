@@ -22,7 +22,7 @@ export default function Sidebar() {
   };
 
   return (
-    <nav className="flex flex-col justify-between h-screen bg-gray-200 dark:bg-gray-800 fixed">
+    <nav className="flex flex-col justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed">
       <div className="flex flex-col w-[88px] mt-5">
         <ul>
           <li>
