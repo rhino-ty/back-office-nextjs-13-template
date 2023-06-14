@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Providers>
           <Sidebar />
-          <main className="ml-[88px]">{children}</main>
+          <main className="pl-[88px]">{children}</main>
         </Providers>
       </body>
     </html>
