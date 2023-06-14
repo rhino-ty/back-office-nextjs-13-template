@@ -25,28 +25,36 @@ export default function DarkModeToggleButton() {
   };
 
   return (
-    <button
-      type="button"
-      className="w-12 h-12"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* 라이트모드 */}
-      {theme === "light" &&
-        (hovered ? (
-          <LightModeIcon className={color} />
+    <div className="inline-flex items-center w-12 h-12 focus:outline-none rounded text-base mt-4">
+      <button
+        className="rounded-full border-2 border-solid border-gray-800 p-3 border-opacity-60 
+        dark:border-gray-200 dark:border-opacity-50 "
+        type="button"
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* 라이트모드 */}
+        {hovered ? (
+          <LightModeIcon
+            className={`${color} visible dark:invisible dark:w-0 dark:h-0 ease-in-out duration-100`}
+          />
         ) : (
-          <LightModeOutlinedIcon className={color} />
-        ))}
-
-      {/* 다크모드 */}
-      {theme === "dark" &&
-        (hovered ? (
-          <DarkModeIcon className={color} />
+          <LightModeOutlinedIcon
+            className={`${color} visible dark:invisible dark:w-0 dark:h-0 ease-in-out duration-100`}
+          />
+        )}
+        {/* 다크모드 */}
+        {hovered ? (
+          <DarkModeIcon
+            className={`${color} invisible dark:visible dark:w-6 dark:h-6 w-0 h-0 ease-in-out duration-100`}
+          />
         ) : (
-          <DarkModeOutlinedIcon className={color} />
-        ))}
-    </button>
+          <DarkModeOutlinedIcon
+            className={`${color} invisible dark:visible dark:w-6 dark:h-6 w-0 h-0 ease-in-out duration-100`}
+          />
+        )}
+      </button>
+    </div>
   );
 }
