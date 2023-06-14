@@ -1,10 +1,10 @@
-# next-theme
+# [next-theme](https://www.npmjs.com/package/next-themes)
 
 Next.js 프레임워크를 사용하는 웹 애플리케이션에서 테마(Theme) 관리를 간편하게 해주는 패키지
 
 (Github)[https://github.com/pacocoursey/next-themes]
 
-## 설치
+## Install
 
 `npm install next-themes`
 

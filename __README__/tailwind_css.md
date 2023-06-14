@@ -1,9 +1,9 @@
-# Tailwind CSS
+# [Tailwind CSS](https://www.npmjs.com/package/tailwindcss)
 
 [github](https://github.com/tailwindlabs/tailwindcss)<br/>
 [Docs](https://tailwindcss.com/docs/)
 
-## Install 방법
+## Install
 
 [Tailwind With Next.JS](https://tailwindcss.com/docs/guides/nextjs)
 
