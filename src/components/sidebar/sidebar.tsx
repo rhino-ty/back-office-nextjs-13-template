@@ -8,10 +8,12 @@ import PaletteOutlinedIcon from "@mui/icons-material/PaletteOutlined";
 import Link from "next/link";
 import { useCallback, useState } from "react";
 import DarkModeToggleButton from "../darkModeToggleButton";
+import Drawer from "./drawer";
 import "./sidebar.css";
 
 export default function Sidebar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
+  const [drawerMenuSetting, setDrawerMenuSetting] = useState("Idle");
 
   const handleDrawerMenuHover = useCallback(() => {
     setDrawerOpen(true);
@@ -19,6 +21,10 @@ export default function Sidebar() {
 
   const handleDrawerMenuClose = useCallback(() => {
     setDrawerOpen(false);
+  }, []);
+
+  const handleDrawerMenuContent = useCallback((menuContent: string) => {
+    setDrawerMenuSetting(menuContent);
   }, []);
 
   return (
@@ -51,7 +57,10 @@ export default function Sidebar() {
             <li>
               <div
                 className="flex justify-center"
-                onMouseEnter={handleDrawerMenuHover}
+                onMouseEnter={() => {
+                  handleDrawerMenuHover();
+                  handleDrawerMenuContent("Develop");
+                }}
                 onMouseLeave={handleDrawerMenuClose}
               >
                 <Link href="/develop" className="sidebar-link group">
@@ -63,7 +72,10 @@ export default function Sidebar() {
             <li>
               <div
                 className="flex justify-center"
-                onMouseEnter={handleDrawerMenuHover}
+                onMouseEnter={() => {
+                  handleDrawerMenuHover();
+                  handleDrawerMenuContent("Foundations");
+                }}
                 onMouseLeave={handleDrawerMenuClose}
               >
                 <Link href="/foundations" className="sidebar-link group">
@@ -75,7 +87,10 @@ export default function Sidebar() {
             <li>
               <div
                 className="flex justify-center"
-                onMouseEnter={handleDrawerMenuHover}
+                onMouseEnter={() => {
+                  handleDrawerMenuHover();
+                  handleDrawerMenuContent("Styles");
+                }}
                 onMouseLeave={handleDrawerMenuClose}
               >
                 <Link href="/styles" className="sidebar-link group">
@@ -92,12 +107,12 @@ export default function Sidebar() {
         </div>
       </nav>
 
-      <div
-        className={`drawer-menu 
-          ${isDrawerOpen ? "animation-slide-in" : "animation-slide-out"}`}
-        onMouseEnter={handleDrawerMenuHover}
-        onMouseLeave={handleDrawerMenuClose}
-      ></div>
+      <Drawer
+        isDrawerOpen={isDrawerOpen}
+        handleDrawerMenuHover={handleDrawerMenuHover}
+        handleDrawerMenuClose={handleDrawerMenuClose}
+        drawerMenuSetting={drawerMenuSetting}
+      />
     </>
   );
 }
