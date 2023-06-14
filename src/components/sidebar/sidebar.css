@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .sidebar-link {
-  @apply w-20 mx-auto -mt-1 mb-4 p-1 text-center;
+  @apply w-20 mx-auto mt-1 mb-2 p-1 text-center;
 }
 
 .icon-style {
