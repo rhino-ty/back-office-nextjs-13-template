@@ -6,20 +6,20 @@ import CodeIcon from "@mui/icons-material/Code";
 import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import PaletteOutlinedIcon from "@mui/icons-material/PaletteOutlined";
 import Link from "next/link";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import DarkModeToggleButton from "../darkModeToggleButton";
 import "./sidebar.css";
 
 export default function Sidebar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
 
-  const handleDrawerMenuHover = () => {
+  const handleDrawerMenuHover = useCallback(() => {
     setDrawerOpen(true);
-  };
+  }, []);
 
-  const handleDrawerMenuClose = () => {
+  const handleDrawerMenuClose = useCallback(() => {
     setDrawerOpen(false);
-  };
+  }, []);
 
   return (
     <>
