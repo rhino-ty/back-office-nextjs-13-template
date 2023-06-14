@@ -50,7 +50,7 @@ export default function Sidebar() {
               >
                 <Link href="/get-started" className="sidebar-link group">
                   <AppsRoundedIcon className="icon-style group-hover:bg-opacity-70 group-hover:scale-105" />
-                  <label className="label-style ">Get Started</label>
+                  <label className="label-style ">Get started</label>
                 </Link>
               </div>
             </li>

@@ -24,8 +24,8 @@ export default function Drawer({
     >
       <nav className="pb-6 pt-2">
         {menuItems?.map((menuItem: string) => (
-          <div key={menuItem} className="transition pt-[2px] mx-2">
-            <button className="text-sm px-4 w-full h-11 p-[2px] rounded-3xl hover:bg-[#E6E8ED] dark:hover:bg-[#393B3D] text-left">
+          <div key={menuItem} className="transition mx-2">
+            <button className="text-[13px] px-[17px] w-full h-12 p-[2px] rounded-3xl hover:bg-[#E6E8ED] dark:hover:bg-[#393B3D] text-left">
               {menuItem}
             </button>
           </div>
