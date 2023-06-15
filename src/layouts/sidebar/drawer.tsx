@@ -14,7 +14,6 @@ export default function Drawer({
   drawerMenuSetting,
 }: DrawerProps) {
   const menuItems = drawerMenuContent[drawerMenuSetting];
-  console.log(menuItems);
 
   return (
     <div
