@@ -6,6 +6,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
+import SwipeVerticalIcon from '@mui/icons-material/SwipeVertical';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
 import DarkModeToggleButton from '../../components/darkModeToggleButton';
@@ -108,6 +109,17 @@ export default function Sidebar() {
                 <Link href='/login' className='sidebar-link group'>
                   <LockOpenIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
                   <label className='label-style'>Login</label>
+                </Link>
+              </div>
+            </li>
+            <li>
+              <div
+                className='flex justify-center'
+                onMouseEnter={handleDrawerMenuClose}
+              >
+                <Link href='/scroll' className='sidebar-link group'>
+                  <SwipeVerticalIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <label className='label-style'>Scroll</label>
                 </Link>
               </div>
             </li>
