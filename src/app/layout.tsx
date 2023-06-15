@@ -1,5 +1,5 @@
-import Sidebar from '@/layouts/sidebar/sidebar';
 import { Inter } from 'next/font/google';
+import Sidebar from '../layouts/sidebar/sidebar';
 import '../styles/globals.css';
 import { Providers } from './providers';
 

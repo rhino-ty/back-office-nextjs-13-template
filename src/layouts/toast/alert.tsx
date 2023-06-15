@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const NormalAlertTemplate = (props: any) => {
+const NormalAlertToast = (props: any) => {
   const { gToast, toast } = props;
 
   useEffect(() => {
@@ -21,4 +21,13 @@ const NormalAlertTemplate = (props: any) => {
   );
 };
 
-export default NormalAlertTemplate;
+export default NormalAlertToast;
+
+// 사용 예시
+// toast(
+//   true,
+//   'info',
+//   'test',
+//   () => <div>비밀번호 변경하는데 실패하였습니다.</div>,
+//   2000
+// );
