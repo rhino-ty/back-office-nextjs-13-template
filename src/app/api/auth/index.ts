@@ -11,6 +11,7 @@ export const handleLoginSubmit = async (email: string, password: string) => {
 
     // 로그인 요청 성공
     console.log(response.data);
+    localStorage.setItem('access_token', response.data.token);
   } catch (error) {
     // 로그인 요청 실패
     console.error(error);
