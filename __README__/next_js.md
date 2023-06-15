@@ -1,3 +1,11 @@
+# next.js
+
+SSR 렌더링을 쉽게 하기 위해 사용. app 디렉토리 채택<br/>
+`/src`에 `/app`, `/components`, `/store`, `/style` 위치
+`/app`에는 Page, Layout, API 라우팅 기능 사용을 위해 각 페이지 및 layout, api 폴더 위치<br/>
+
+# 내장 next.js 13 설명
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
