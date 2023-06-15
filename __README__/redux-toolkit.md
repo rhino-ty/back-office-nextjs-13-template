@@ -5,13 +5,14 @@
 ## Install
 
 `npm i react-redux next-redux-wrapper @reduxjs/toolkit redux-persist`
+`npm i redux-logger --save-dev # 필요한 경우에 설치`
 
 ### redux-persist 필요한 이유
 
 팝업 관리하며 상태 유지를 통해 새로고침돼도 그대로 유지되어야하기 위함. 관리자 도구에서 자주 다루는 문제임.<br/>
 팝업 관련 대부분 상태(열리고 닫힘 상태, 입력데이터 상태 등)는 persist로 관리할 예정
 
-### next-redux-wrapper 필요한 이유
+### [next-redux-wrapper 필요한 이유](https://simsimjae.medium.com/next-redux-wrapper%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0-5d0176209d14)
 
 리액트 앱에는 리덕스 스토어가 하나임. 하지만 Next 를 사용하는 순간 스토어는 여러 개가 될 수 있는데, Next 는 유저가 요청 할 때마다 리덕스 스토어를 새로 생성.<br />
 또한 Next 에서 제공하는 서버사이드 환경에서 리덕스 스토어에 접근하려면 해당 라이브러리가 없이는 불가능.<br/>
