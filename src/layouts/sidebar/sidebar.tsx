@@ -8,7 +8,7 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
-import DarkModeToggleButton from '../darkModeToggleButton';
+import DarkModeToggleButton from '../../components/darkModeToggleButton';
 import Drawer from './drawer';
 import './sidebar.css';
 
