@@ -1,4 +1,18 @@
+'use client';
+
+import { useState } from 'react';
+import { handleLoginSubmit } from '../api/auth';
+
 export default function Login() {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    handleLoginSubmit(email, password);
+  };
+
   return (
     <section>
       <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
@@ -7,7 +21,7 @@ export default function Login() {
             <h1 className='text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white'>
               Sign in to your account
             </h1>
-            <form className='space-y-4 md:space-y-6' action='#'>
+            <form className='space-y-4 md:space-y-6' onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor='email'
@@ -18,6 +32,10 @@ export default function Login() {
                 <input
                   type='email'
                   name='email'
+                  value={email}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                   id='email'
                   className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-sidebar-bg-dark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                   placeholder='name@company.com'
@@ -34,6 +52,10 @@ export default function Login() {
                 <input
                   type='password'
                   name='password'
+                  value={password}
+                  onChange={(e) => {
+                    setPassword(e.target.value);
+                  }}
                   id='password'
                   placeholder='••••••••'
                   className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-sidebar-bg-dark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
@@ -49,7 +71,7 @@ export default function Login() {
                 Sign in
               </button>
               <p className='text-sm font-light text-gray-500 dark:text-gray-400'>
-                Don’t have an account yet?
+                Don’t have an account yet?{' '}
                 <a
                   href='#'
                   className='font-medium text-primary-600 hover:underline dark:text-primary-500'
