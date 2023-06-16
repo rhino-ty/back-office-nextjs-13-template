@@ -3,10 +3,11 @@ import AppsRoundedIcon from '@mui/icons-material/AppsRounded';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import CodeIcon from '@mui/icons-material/Code';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
 import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
-import SwipeVerticalIcon from '@mui/icons-material/SwipeVertical';
+import SwipeVerticalOutlinedIcon from '@mui/icons-material/SwipeVerticalOutlined';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
 import DarkModeToggleButton from '../../components/darkModeToggleButton';
@@ -118,7 +119,7 @@ export default function Sidebar() {
                 onMouseEnter={handleDrawerMenuClose}
               >
                 <Link href='/scroll' className='sidebar-link group'>
-                  <SwipeVerticalIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <SwipeVerticalOutlinedIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
                   <label className='label-style'>Scroll</label>
                 </Link>
               </div>
@@ -131,6 +132,17 @@ export default function Sidebar() {
                 <Link href='/modal' className='sidebar-link group'>
                   <PriorityHighIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
                   <label className='label-style'>Modal</label>
+                </Link>
+              </div>
+            </li>
+            <li>
+              <div
+                className='menu-container'
+                onMouseEnter={handleDrawerMenuClose}
+              >
+                <Link href='/toast' className='sidebar-link group'>
+                  <InfoOutlinedIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <label className='label-style'>toast</label>
                 </Link>
               </div>
             </li>
