@@ -1,14 +1,13 @@
 'use client';
 import { useState } from 'react';
 
-export default function Popup() {
+export default function Modal() {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => setShowModal(true);
   const closeModal = () => setShowModal(false);
-
   return (
-    <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
+    <>
       <button
         onClick={openModal}
         className='text-xl w-40 text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg px-5 py-2.5 text-center 
@@ -54,6 +53,6 @@ export default function Popup() {
           <div className='opacity-25 fixed inset-0 z-40 bg-black'></div>
         </>
       )}
-    </div>
+    </>
   );
 }
