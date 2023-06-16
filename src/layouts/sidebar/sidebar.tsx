@@ -6,6 +6,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import HomeRoundedIcon from '@mui/icons-material/HomeRounded';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import PaletteOutlinedIcon from '@mui/icons-material/PaletteOutlined';
+import PriorityHighIcon from '@mui/icons-material/PriorityHigh';
 import SwipeVerticalIcon from '@mui/icons-material/SwipeVertical';
 import Link from 'next/link';
 import { useCallback, useState } from 'react';
@@ -32,7 +33,7 @@ export default function Sidebar() {
   return (
     <>
       <nav className='sidebar-container'>
-        <div className='flex flex-col w-full mt-4 fixed'>
+        <div className='flex flex-col w-full mt-4'>
           <ul>
             <li>
               <div
@@ -123,10 +124,21 @@ export default function Sidebar() {
                 </Link>
               </div>
             </li>
+            <li>
+              <div
+                className='flex justify-center'
+                onMouseEnter={handleDrawerMenuClose}
+              >
+                <Link href='/popup' className='sidebar-link group'>
+                  <PriorityHighIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <label className='label-style'>Popup</label>
+                </Link>
+              </div>
+            </li>
           </ul>
         </div>
 
-        <div className='mb-4 flex justify-center'>
+        <div className='flex justify-center'>
           <DarkModeToggleButton />
         </div>
       </nav>

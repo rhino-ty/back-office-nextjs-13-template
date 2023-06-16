@@ -25,12 +25,12 @@ export default function DarkModeToggleButton() {
   };
 
   return (
-    <div className="inline-flex items-center w-12 h-12 focus:outline-none rounded text-base mt-4">
+    <div className='inline-flex items-center w-12 h-12 focus:outline-none rounded text-base my-4'>
       <button
-        className="rounded-full border-[1px] border-solid border-gray-800 p-3 border-opacity-60 
-        dark:border-gray-200 dark:border-opacity-50"
-        type="button"
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        className='rounded-full border-[1px] border-solid border-gray-800 p-3 border-opacity-60 
+        dark:border-gray-200 dark:border-opacity-50'
+        type='button'
+        onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
