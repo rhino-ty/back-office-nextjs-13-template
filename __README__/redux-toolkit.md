@@ -9,8 +9,8 @@
 
 ### redux-persist 필요한 이유
 
-팝업 관리하며 상태 유지를 통해 새로고침돼도 그대로 유지되어야하기 위함. 관리자 도구에서 자주 다루는 문제임.<br/>
-팝업 관련 대부분 상태(열리고 닫힘 상태, 입력데이터 상태 등)는 persist로 관리할 예정
+모달 관리하며 상태 유지를 통해 새로고침돼도 그대로 유지되어야하기 위함. 관리자 도구에서 자주 다루는 문제임.<br/>
+모달 관련 대부분 상태(열리고 닫힘 상태, 입력데이터 상태 등)는 persist로 관리할 예정
 
 ### [next-redux-wrapper 필요한 이유](https://simsimjae.medium.com/next-redux-wrapper%EA%B0%80-%ED%95%84%EC%9A%94%ED%95%9C-%EC%9D%B4%EC%9C%A0-5d0176209d14)
 
@@ -54,3 +54,19 @@ export default wrapper;
 6. `wrapper`: `createWrapper`로 생성된 wrapper로 Redux store를 Next.js에서 사용 가능하게 함.
 
 `logger`는 console.log 같은 것으로 선택임.
+
+## 사용처
+
+간단하게 기술하겠음.
+
+### /src/store
+
+auth, modal, scroll 등등 리듀서 작성 및 `/store/index.tsx`에서 스토어 생성 및 redux-persist 설정
+
+### /src/app/modal
+
+구현한 리듀서 활용, Dispatch를 Handler 함수로 구현 후 배치
+
+### /src/redux_provider
+
+persistor 및 redux-provider 배치
