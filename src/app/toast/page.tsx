@@ -22,7 +22,7 @@ export default function Toast() {
       </button>
 
       {showToast && (
-        <div className='fixed bottom-5 right-5 bg-gray-800 text-white dark:bg-gray-200 dark:text-gray-800 py-2 px-4 rounded'>
+        <div className='fixed bottom-5 right-5 bg-window-bg-dark text-white dark:bg-window-bg dark:text-gray-800 py-2 px-4 rounded'>
           Toast Message
         </div>
       )}

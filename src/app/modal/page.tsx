@@ -32,7 +32,7 @@ export default function Popup() {
       {showModal && (
         <>
           <div className='justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none'>
-            <div className='relative w-80 my-6 mx-auto max-w-3xl dark:bg-gray-800'>
+            <div className='relative w-80 my-6 mx-auto max-w-3xl bg-white dark:bg-window-bg-dark'>
               {/*content*/}
               <div className='border-0 rounded-lg shadow-lg relative flex flex-col w-full outline-none focus:outline-none dark:border-gray-600'>
                 {/*header*/}
@@ -43,7 +43,7 @@ export default function Popup() {
                 </div>
                 {/*body*/}
                 <div className='relative p-6 flex-auto'>
-                  <p className='my-4 text-slate-500 text-lg leading-relaxed dark:text-gray-300'>
+                  <p className='my-4 text-slate-500 text-lg leading-relaxed dark:text-gray-100'>
                     HI! I&apos;m modal
                   </p>
                   <input
