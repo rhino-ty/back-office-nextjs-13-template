@@ -15,6 +15,10 @@ const persistedReducer = persistReducer(persistConfig, modalReducer);
 // configureStore를 사용하여 Redux store를 생성
 export const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }),
 });
 
 // 타입 사용을 위한 RootState 구현
