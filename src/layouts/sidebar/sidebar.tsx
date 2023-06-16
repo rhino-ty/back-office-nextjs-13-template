@@ -32,7 +32,7 @@ export default function Sidebar() {
   return (
     <>
       <nav className='sidebar-container'>
-        <div className='flex flex-col w-[88px] mt-4 fixed'>
+        <div className='flex flex-col w-full mt-4 fixed'>
           <ul>
             <li>
               <div
