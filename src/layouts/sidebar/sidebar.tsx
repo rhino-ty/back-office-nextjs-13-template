@@ -31,8 +31,8 @@ export default function Sidebar() {
 
   return (
     <>
-      <nav className='flex flex-col justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed z-[2]'>
-        <div className='flex flex-col w-[88px] mt-4'>
+      <nav className='sidebar-container'>
+        <div className='flex flex-col w-[88px] mt-4 fixed'>
           <ul>
             <li>
               <div

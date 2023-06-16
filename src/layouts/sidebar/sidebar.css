@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.sidebar-container {
+  @apply flex flex-col justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed z-[2]
+}
+
 .sidebar-link {
   @apply w-20 mx-auto mt-1 mb-2 p-1 text-center;
 }
