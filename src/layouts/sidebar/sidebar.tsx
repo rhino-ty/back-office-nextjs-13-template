@@ -128,9 +128,9 @@ export default function Sidebar() {
                 className='menu-container'
                 onMouseEnter={handleDrawerMenuClose}
               >
-                <Link href='/popup' className='sidebar-link group'>
+                <Link href='/modal' className='sidebar-link group'>
                   <PriorityHighIcon className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
-                  <label className='label-style'>Popup</label>
+                  <label className='label-style'>Modal</label>
                 </Link>
               </div>
             </li>
