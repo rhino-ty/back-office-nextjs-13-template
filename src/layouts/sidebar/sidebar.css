@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .sidebar-container {
-  @apply flex flex-col w-[88px] justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed z-[2]
+  @apply flex flex-col w-[88px] justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed z-[2];
+}
+
+.menu-container {
+  @apply flex justify-center;
 }
 
 .sidebar-link {

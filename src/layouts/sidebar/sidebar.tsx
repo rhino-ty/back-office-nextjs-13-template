@@ -1,5 +1,4 @@
 'use client';
-
 import AppsRoundedIcon from '@mui/icons-material/AppsRounded';
 import BookOutlinedIcon from '@mui/icons-material/BookOutlined';
 import CodeIcon from '@mui/icons-material/Code';
@@ -37,7 +36,7 @@ export default function Sidebar() {
           <ul>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={handleDrawerMenuClose}
               >
                 <Link href='/' className='sidebar-link group'>
@@ -48,7 +47,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={handleDrawerMenuClose}
               >
                 <Link href='/get-started' className='sidebar-link group'>
@@ -59,7 +58,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={() => {
                   handleDrawerMenuHover();
                   handleDrawerMenuContent('Develop');
@@ -74,7 +73,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={() => {
                   handleDrawerMenuHover();
                   handleDrawerMenuContent('Foundations');
@@ -89,7 +88,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={() => {
                   handleDrawerMenuHover();
                   handleDrawerMenuContent('Styles');
@@ -104,7 +103,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={handleDrawerMenuClose}
               >
                 <Link href='/login' className='sidebar-link group'>
@@ -115,7 +114,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={handleDrawerMenuClose}
               >
                 <Link href='/scroll' className='sidebar-link group'>
@@ -126,7 +125,7 @@ export default function Sidebar() {
             </li>
             <li>
               <div
-                className='flex justify-center'
+                className='menu-container'
                 onMouseEnter={handleDrawerMenuClose}
               >
                 <Link href='/popup' className='sidebar-link group'>
@@ -138,7 +137,7 @@ export default function Sidebar() {
           </ul>
         </div>
 
-        <div className='flex justify-center'>
+        <div className='mb-4 menu-container'>
           <DarkModeToggleButton />
         </div>
       </nav>
