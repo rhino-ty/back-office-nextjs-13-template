@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .sidebar-container {
-  @apply flex flex-col w-[88px] justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed z-[2];
+  @apply flex flex-col w-[88px] items-center justify-between h-screen bg-[#f3f6fc] dark:bg-[#2d2f31] fixed z-[2];
 }
 
 .menu-container {
@@ -11,7 +11,7 @@
 }
 
 .sidebar-link {
-  @apply w-20 mx-auto mt-1 mb-2 p-1 text-center;
+  @apply w-20 mx-auto mt-1 mb-2 p-1 text-center flex flex-col justify-center items-center;
 }
 
 .icon-style {

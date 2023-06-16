@@ -137,7 +137,7 @@ export default function Sidebar() {
           </ul>
         </div>
 
-        <div className='mb-4 menu-container'>
+        <div className='mb-4 flex'>
           <DarkModeToggleButton />
         </div>
       </nav>
