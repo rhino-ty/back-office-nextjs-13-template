@@ -69,4 +69,4 @@ auth, modal, scroll 등등 리듀서 작성 및 `/store/index.tsx`에서 스토�
 
 ### /src/redux_provider
 
-persistor 및 redux-provider 배치
+persistor 및 redux-provider 작성 후 `/app/layout.tsx`에 배치

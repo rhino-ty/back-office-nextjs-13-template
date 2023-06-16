@@ -6,7 +6,7 @@
 
 `npm install @mui/icons-material @mui/material @emotion/styled @emotion/react`
 
-## 사용법
+## 아이콘 사용법
 
 1. [MUI 아이콘 사이트](https://mui.com/material-ui/material-icons/)에 가서 아이콘 검색
 2. 원하는 걸 클릭 후 import 하여 아이콘 불러오기
