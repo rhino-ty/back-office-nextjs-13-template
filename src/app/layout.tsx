@@ -1,9 +1,7 @@
 import { Inter } from 'next/font/google';
-import { Provider, useStore } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
 import Sidebar from '../layouts/sidebar/sidebar';
-import { persistor } from '../store';
 import '../styles/globals.css';
+import ReduxProvider from './reduxProvider';
 import { ThemeProviders } from './themeProviders';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -18,18 +16,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const store = useStore();
   return (
-    <html lang='en'>
-      <body className={inter.className}>
-        <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-            <ThemeProviders>
-              <Sidebar />
-              <main className='pl-[88px]'>{children}</main>
-            </ThemeProviders>
-          </PersistGate>
-        </Provider>
+    <html lang='en' className={inter.className}>
+      <body>
+        <ReduxProvider>
+          <ThemeProviders>
+            <Sidebar />
+            <main className='pl-[88px]'>{children}</main>
+          </ThemeProviders>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -13,7 +13,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, modalReducer);
 
 // configureStore를 사용하여 Redux store를 생성
-const store = configureStore({
+export const store = configureStore({
   reducer: persistedReducer,
 });
 
