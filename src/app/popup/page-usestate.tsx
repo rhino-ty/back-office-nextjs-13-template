@@ -1,29 +1,16 @@
 'use client';
-import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../../store';
-import { closeModal, openModal, setInputValue } from '../../store/modal';
+import { useState } from 'react';
 
 export default function Popup() {
-  const dispatch = useDispatch();
-  const showModal = useSelector((state: RootState) => state.showModal);
-  const inputValue = useSelector((state: RootState) => state.inputValue);
+  const [showModal, setShowModal] = useState(false);
 
-  const openModalHandler = () => {
-    dispatch(openModal());
-  };
-
-  const closeModalHandler = () => {
-    dispatch(closeModal());
-  };
-
-  const inputChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setInputValue(e.target.value));
-  };
+  const openModal = () => setShowModal(true);
+  const closeModal = () => setShowModal(false);
 
   return (
     <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
       <button
-        onClick={openModalHandler}
+        onClick={openModal}
         className='text-xl w-40 text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg px-5 py-2.5 text-center 
                    dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
       >
@@ -48,8 +35,6 @@ export default function Popup() {
                     type='text'
                     name='text'
                     id='text'
-                    value={inputValue}
-                    onChange={inputChangeHandler}
                     className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-sidebar-bg-dark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                   />
                 </div>
@@ -58,7 +43,7 @@ export default function Popup() {
                   <button
                     className='text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
                     type='button'
-                    onClick={closeModalHandler}
+                    onClick={closeModal}
                   >
                     Close
                   </button>
