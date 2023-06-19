@@ -5,7 +5,7 @@ import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-export default function DarkModeToggleButton() {
+export default function ThemeModeToggleButton() {
   const { theme, setTheme } = useTheme();
   const [hovered, setHovered] = useState(false);
   const [color, setColor] = useState(

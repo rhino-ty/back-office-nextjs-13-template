@@ -11,8 +11,8 @@ import {
   SwipeVerticalOutlined,
 } from '@mui/icons-material';
 import Link from 'next/link';
-import { useCallback, useState } from 'react';
-import DarkModeToggleButton from '../../components/darkModeToggleButton';
+import { useState } from 'react';
+import ThemeModeToggleButton from '../../components/theme_mode_toggle_button';
 import Drawer from './drawer';
 import './sidebar.css';
 
@@ -188,7 +188,7 @@ export default function Sidebar() {
         </div>
 
         <div className='mb-4 flex'>
-          <DarkModeToggleButton />
+          <ThemeModeToggleButton />
         </div>
       </nav>
 
