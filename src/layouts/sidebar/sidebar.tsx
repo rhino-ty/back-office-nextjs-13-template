@@ -157,11 +157,11 @@ export default function Sidebar() {
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/pagenation' className='sidebar-link group'>
+                <Link href='/pagination' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <AutoStoriesOutlined />
                   </div>
-                  <label className='label-style'>Pagenation</label>
+                  <label className='label-style'>pagination</label>
                 </Link>
               </div>
             </li>
