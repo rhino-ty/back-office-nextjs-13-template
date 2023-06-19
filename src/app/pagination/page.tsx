@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { ChangeEvent, useEffect, useState } from 'react';
 import { handlePageLoad } from '../api/pagination';
 import Image from 'next/image';
 import { UserData } from '@/types/pagination';
@@ -13,22 +13,7 @@ export default function ListWithPagination() {
   const [lastPages, setLastPages] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
 
-  // 1번째 렌더링
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoading(true);
-      const response = await handlePageLoad(1);
-      if (response) {
-        setLastPages(response.total_pages);
-        setLoadedData(response.data);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  // page가 바뀌면 렌더링
+  // 1번째 렌더링과 page가 바뀌면 렌더링
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
@@ -48,8 +33,8 @@ export default function ListWithPagination() {
   //     ? parseInt(dummydata.length / 6)
   //     : parseInt(dummydata.length / 6) + 1; // 마지막 페이지
 
-  const handlePage = (e) => {
-    const nowPageInt = parseInt(e.target.innerText);
+  const handlePage = (e: ChangeEvent<unknown>) => {
+    const nowPageInt = parseInt((e.target as HTMLLIElement).innerText);
     setPage(nowPageInt);
   };
 
@@ -90,6 +75,7 @@ export default function ListWithPagination() {
       )}
       <div className=' mt-5'>
         <Pagination
+          // count={lastPages}
           count={10}
           defaultPage={1}
           boundaryCount={2}
