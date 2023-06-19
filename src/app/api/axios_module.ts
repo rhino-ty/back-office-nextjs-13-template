@@ -6,7 +6,7 @@ const SERVER_URL = process.env.NEXT_PUBLIC_SERVER_URL;
 const instance = axios.create({
   baseURL: SERVER_URL,
   headers: {
-    Authorization: `Bearer ${getAccessTokenFromLocalStorage}}`,
+    Authorization: `Bearer ${getAccessTokenFromLocalStorage()}}`,
   },
 });
 
