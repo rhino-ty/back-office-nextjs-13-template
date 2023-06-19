@@ -1,21 +1,21 @@
 // 미구현 차후에 진행
-import React from 'react';
+// import React from 'react';
 
-const NormalToastTemplate = (props: any) => {
-  const [children, setChildren] = React.useState([]);
+// const NormalToastTemplate = (props: any) => {
+//   const [children, setChildren] = React.useState([]);
 
-  return (
-    <div className='fixed z-toast top-30 left-30'>
-      {/* -------------------------------   */}
-      {children.map((item) => {
-        return <item />;
-      })}
-      x
-    </div>
-  );
-};
+//   return (
+//     <div className='fixed z-toast top-30 left-30'>
+//       {/* -------------------------------   */}
+//       {children.map((item) => {
+//         return <item />;
+//       })}
+//       x
+//     </div>
+//   );
+// };
 
-export default NormalToastTemplate;
+// export default NormalToastTemplate;
 
 /*
 <div
