@@ -7,6 +7,7 @@ import Pagination from '@mui/material/Pagination';
 
 export default function ListWithPagination() {
   // reqres.in/ : 6개씩, 2페이지까지 있다(index로는 1)
+  // TODO: 새로고침했을 때 페이지 유지
 
   const [page, setPage] = useState<number>(1); // 처음 페이지는 1
   const [loadedData, setLoadedData] = useState<UserData[] | null>(null);

@@ -16,10 +16,19 @@ import { useState } from 'react';
 import ThemeModeToggleButton from '../../components/theme_mode_toggle_button';
 import Drawer from './drawer';
 import './sidebar.css';
+import { useRouter } from 'next/router';
 
 export default function Sidebar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [drawerMenuSetting, setDrawerMenuSetting] = useState('Idle');
+  // const pathname = usePathname();
+  // const router = useRouter();
+
+  // const handleLinkClick = (e) => {
+  //   e.preventDefault();
+  //   router.push('/');
+  // };
+  // TODO: useRouter 써서 초기로딩 개선화하기: admin에 있대
 
   const handleDrawerMenuHover = () => {
     setDrawerOpen(true);
@@ -40,12 +49,16 @@ export default function Sidebar() {
           <ul>
             <li>
               <div className='menu-container'>
-                <Link href='/' className='sidebar-link group'>
+                <a
+                  href='/'
+                  // onClick={handleLinkClick}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <HomeRounded />
                   </div>
                   <label className='label-style '>Home</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
