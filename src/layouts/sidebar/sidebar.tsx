@@ -45,7 +45,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/' className='sidebar-link group'>
-                  <HomeRounded className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <HomeRounded />
+                  </div>
                   <label className='label-style '>Home</label>
                 </Link>
               </div>
@@ -58,7 +60,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/get-started' className='sidebar-link group'>
-                  <AppsRounded className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <AppsRounded />
+                  </div>
                   <label className='label-style '>Get started</label>
                 </Link>
               </div>
@@ -75,7 +79,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/develop' className='sidebar-link group'>
-                  <Code className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <Code />
+                  </div>
                   <label className='label-style '>Develop</label>
                 </Link>
               </div>
@@ -92,7 +98,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/foundations' className='sidebar-link group'>
-                  <BookOutlined className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <BookOutlined />
+                  </div>
                   <label className='label-style'>Foundations</label>
                 </Link>
               </div>
@@ -109,7 +117,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/styles' className='sidebar-link group'>
-                  <PaletteOutlined className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <PaletteOutlined />
+                  </div>
                   <label className='label-style'>Styles</label>
                 </Link>
               </div>
@@ -122,7 +132,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/login' className='sidebar-link group'>
-                  <LockOpen className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <LockOpen />
+                  </div>
                   <label className='label-style'>Login</label>
                 </Link>
               </div>
@@ -135,7 +147,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/scroll' className='sidebar-link group'>
-                  <SwipeVerticalOutlined className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <SwipeVerticalOutlined />
+                  </div>
                   <label className='label-style'>Scroll</label>
                 </Link>
               </div>
@@ -148,7 +162,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/modal' className='sidebar-link group'>
-                  <PriorityHigh className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <PriorityHigh />
+                  </div>
                   <label className='label-style'>Modal</label>
                 </Link>
               </div>
@@ -161,7 +177,9 @@ export default function Sidebar() {
                 }}
               >
                 <Link href='/toast' className='sidebar-link group'>
-                  <InfoOutlined className='icon-style group-hover:bg-opacity-70 group-hover:scale-105' />
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <InfoOutlined />
+                  </div>
                   <label className='label-style'>toast</label>
                 </Link>
               </div>
