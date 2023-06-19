@@ -9,6 +9,7 @@ import {
   PaletteOutlined,
   PriorityHigh,
   SwipeVerticalOutlined,
+  AutoStoriesOutlined,
 } from '@mui/icons-material';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -156,11 +157,11 @@ export default function Sidebar() {
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/toast' className='sidebar-link group'>
+                <Link href='/pagenation' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
-                    <InfoOutlined />
+                    <AutoStoriesOutlined />
                   </div>
-                  <label className='label-style'>toast</label>
+                  <label className='label-style'>Pagenation</label>
                 </Link>
               </div>
             </li>
