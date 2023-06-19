@@ -38,12 +38,7 @@ export default function Sidebar() {
         <div className='flex flex-col w-full mt-4'>
           <ul>
             <li>
-              <div
-                className='menu-container'
-                onMouseEnter={() => {
-                  handleDrawerMenuClose();
-                }}
-              >
+              <div className='menu-container'>
                 <Link href='/' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <HomeRounded />
@@ -53,12 +48,7 @@ export default function Sidebar() {
               </div>
             </li>
             <li>
-              <div
-                className='menu-container'
-                onMouseEnter={() => {
-                  handleDrawerMenuClose();
-                }}
-              >
+              <div className='menu-container'>
                 <Link href='/get-started' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <AppsRounded />
@@ -125,12 +115,7 @@ export default function Sidebar() {
               </div>
             </li>
             <li>
-              <div
-                className='menu-container'
-                onMouseEnter={() => {
-                  handleDrawerMenuClose();
-                }}
-              >
+              <div className='menu-container'>
                 <Link href='/login' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <LockOpen />
@@ -140,12 +125,7 @@ export default function Sidebar() {
               </div>
             </li>
             <li>
-              <div
-                className='menu-container'
-                onMouseEnter={() => {
-                  handleDrawerMenuClose();
-                }}
-              >
+              <div className='menu-container'>
                 <Link href='/scroll' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <SwipeVerticalOutlined />
@@ -155,12 +135,7 @@ export default function Sidebar() {
               </div>
             </li>
             <li>
-              <div
-                className='menu-container'
-                onMouseEnter={() => {
-                  handleDrawerMenuClose();
-                }}
-              >
+              <div className='menu-container'>
                 <Link href='/modal' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <PriorityHigh />
@@ -170,12 +145,17 @@ export default function Sidebar() {
               </div>
             </li>
             <li>
-              <div
-                className='menu-container'
-                onMouseEnter={() => {
-                  handleDrawerMenuClose();
-                }}
-              >
+              <div className='menu-container'>
+                <Link href='/toast' className='sidebar-link group'>
+                  <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
+                    <InfoOutlined />
+                  </div>
+                  <label className='label-style'>toast</label>
+                </Link>
+              </div>
+            </li>
+            <li>
+              <div className='menu-container'>
                 <Link href='/toast' className='sidebar-link group'>
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <InfoOutlined />
