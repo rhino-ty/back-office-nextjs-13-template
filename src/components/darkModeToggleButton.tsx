@@ -33,6 +33,7 @@ export default function DarkModeToggleButton() {
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        aria-label='dark-theme-button'
       >
         {theme === 'dark' ? (
           // 다크모드
