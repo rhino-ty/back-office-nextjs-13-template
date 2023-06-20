@@ -22,7 +22,7 @@ export default function RootLayout({
         <ReduxProvider>
           <ThemeProviders>
             <Sidebar />
-            <main className='pl-[88px]'>{children}</main>
+            <main className='ml-[88px] w-screen'>{children}</main>
           </ThemeProviders>
         </ReduxProvider>
       </body>

@@ -41,7 +41,7 @@ export default function ListWithPagination() {
   };
 
   return (
-    <div className='w-[100vw] min-h-[95vh] flex flex-col justify-center items-center'>
+    <div className=' flex flex-col justify-center items-center'>
       {!loading && loadedData ? (
         <div className='w-full'>
           {/* 데이터를 사용하여 View에 필요한 내용을 배치하는 로직을 작성. */}
@@ -49,7 +49,7 @@ export default function ListWithPagination() {
             <ul>
               {loadedData.map((user) => (
                 <li key={user.id} className='my-3'>
-                  <div className='flex justify-between items-center mx-56'>
+                  <div className='flex justify-between items-center mx-5 lg:mx-56'>
                     <span>
                       {user.first_name} {user.last_name}
                     </span>
