@@ -3,15 +3,15 @@ import React, { ChangeEvent, useEffect, useState } from 'react';
 import { handlePageLoad } from '../api/pagination';
 import Image from 'next/image';
 import { UserData } from '@/types/pagination';
-import Pagination from '@mui/material/Pagination';
+import Pagination from '@/components/pagination';
 
 export default function ListWithPagination() {
-  // reqres.in/ : 6개씩, 2페이지까지 있다(index로는 1)
   // TODO: 새로고침했을 때 페이지 유지
 
+  // reqres.in/ : 6개씩, 2페이지까지 있다(index로는 1)
   const [page, setPage] = useState<number>(1); // 처음 페이지는 1
   const [loadedData, setLoadedData] = useState<UserData[] | null>(null);
-  const [lastPages, setLastPages] = useState<number>(0);
+  const [totalPages, setTotalPages] = useState<number>(0);
   const [loading, setLoading] = useState<boolean>(false);
 
   // 1번째 렌더링과 page가 바뀌면 렌더링
@@ -21,7 +21,7 @@ export default function ListWithPagination() {
       const response = await handlePageLoad(page); // 페이지 번호를 변경하여 원하는 페이지의 데이터를 가져올 수 있음
       if (response) {
         setLoadedData(response.data);
-        setLastPages(response.total);
+        setTotalPages(response.total);
         setLoading(false);
       }
     };
@@ -35,10 +35,11 @@ export default function ListWithPagination() {
   //     ? parseInt(dummydata.length / 6)
   //     : parseInt(dummydata.length / 6) + 1; // 마지막 페이지
 
-  const handlePage = (e: ChangeEvent<unknown>) => {
-    const nowPageInt = parseInt((e.target as HTMLLIElement).innerText);
-    setPage(nowPageInt);
-  };
+  // MUI
+  // const handlePage = (e: ChangeEvent<unknown>) => {
+  //   const nowPageInt = parseInt((e.target as HTMLLIElement).innerText);
+  //   setPage(nowPageInt);
+  // };
 
   return (
     <div className=' flex flex-col justify-center items-center'>
@@ -76,8 +77,8 @@ export default function ListWithPagination() {
         </div>
       )}
       <div className=' mt-5'>
-        <Pagination
-          // count={lastPages}
+        {/* MUI */}
+        {/* <Pagination
           count={10}
           defaultPage={1}
           boundaryCount={2}
@@ -85,6 +86,12 @@ export default function ListWithPagination() {
           size='large'
           sx={{ margin: 2, display: 'flex', justifyContent: 'center' }}
           onChange={(e) => handlePage(e)}
+        /> */}
+        <Pagination
+          totalPage={10}
+          // totalPage={totalPages}
+          currentPage={page}
+          setPage={(e) => setPage(e)}
         />
       </div>
     </div>
