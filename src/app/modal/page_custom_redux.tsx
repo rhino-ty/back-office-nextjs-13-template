@@ -23,9 +23,11 @@ export default function Popup() {
   return (
     <div className='flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0'>
       <button
-        onClick={()=>{openModalHandler()}}
+        onClick={() => {
+          openModalHandler();
+        }}
         className='text-xl w-40 text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg px-5 py-2.5 text-center 
-                   dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
+                  dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800'
       >
         Modal
       </button>
@@ -51,7 +53,9 @@ export default function Popup() {
                     name='text'
                     id='text'
                     value={inputValue}
-                    onChange={(e)=>{inputChangeHandler(e)}}
+                    onChange={(e) => {
+                      inputChangeHandler(e);
+                    }}
                     className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-window-bg-dark dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                   />
                 </div>
@@ -60,7 +64,9 @@ export default function Popup() {
                   <button
                     className='text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150'
                     type='button'
-                    onClick={()=>{closeModalHandler()}}
+                    onClick={() => {
+                      closeModalHandler();
+                    }}
                   >
                     Close
                   </button>

@@ -11,23 +11,19 @@ import {
   SwipeVerticalOutlined,
   AutoStoriesOutlined,
 } from '@mui/icons-material';
-import Link from 'next/link';
 import { useState } from 'react';
 import ThemeModeToggleButton from '../../components/theme_mode_toggle_button';
 import Drawer from './drawer';
 import './sidebar.css';
-import { useRouter } from 'next/router';
+// App Directory에서는 next/router와 'use client'를 쓰면 에러 : "NextRouter was not mounted."
+// 그래서 next/navigation을 사용해야함,,
+import { useRouter } from 'next/navigation';
 
 export default function Sidebar() {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const [drawerMenuSetting, setDrawerMenuSetting] = useState('Idle');
-  // const pathname = usePathname();
-  // const router = useRouter();
+  const router = useRouter();
 
-  // const handleLinkClick = (e) => {
-  //   e.preventDefault();
-  //   router.push('/');
-  // };
   // TODO: useRouter 써서 초기로딩 개선화하기: admin에 있대
 
   const handleDrawerMenuHover = () => {
@@ -51,7 +47,10 @@ export default function Sidebar() {
               <div className='menu-container'>
                 <a
                   href='/'
-                  // onClick={handleLinkClick}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/');
+                  }}
                   className='sidebar-link group'
                 >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
@@ -63,12 +62,19 @@ export default function Sidebar() {
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/get-started' className='sidebar-link group'>
+                <a
+                  href='/get-started'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/get-started');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <AppsRounded />
                   </div>
                   <label className='label-style '>Get started</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
@@ -82,12 +88,19 @@ export default function Sidebar() {
                   handleDrawerMenuClose();
                 }}
               >
-                <Link href='/develop' className='sidebar-link group'>
+                <a
+                  href='/develop'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/develop');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <Code />
                   </div>
                   <label className='label-style '>Develop</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
@@ -101,12 +114,19 @@ export default function Sidebar() {
                   handleDrawerMenuClose();
                 }}
               >
-                <Link href='/foundations' className='sidebar-link group'>
+                <a
+                  href='/foundations'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/foundations');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <BookOutlined />
                   </div>
                   <label className='label-style'>Foundations</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
@@ -120,62 +140,104 @@ export default function Sidebar() {
                   handleDrawerMenuClose();
                 }}
               >
-                <Link href='/styles' className='sidebar-link group'>
+                <a
+                  href='/styles'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/styles');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <PaletteOutlined />
                   </div>
                   <label className='label-style'>Styles</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/login' className='sidebar-link group'>
+                <a
+                  href='/login'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/login');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <LockOpen />
                   </div>
                   <label className='label-style'>Login</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/scroll' className='sidebar-link group'>
+                <a
+                  href='/scroll'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/scroll');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <SwipeVerticalOutlined />
                   </div>
                   <label className='label-style'>Scroll</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/modal' className='sidebar-link group'>
+                <a
+                  href='/modal'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/modal');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <PriorityHigh />
                   </div>
                   <label className='label-style'>Modal</label>
-                </Link>
+                </a>
               </div>
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/toast' className='sidebar-link group'>
+                <a
+                  href='/toast'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/toast');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <InfoOutlined />
                   </div>
-                  <label className='label-style'>toast</label>
-                </Link>
+                  <label className='label-style'>Toast</label>
+                </a>
               </div>
             </li>
             <li>
               <div className='menu-container'>
-                <Link href='/pagination' className='sidebar-link group'>
+                <a
+                  href='/pagination'
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/pagination');
+                  }}
+                  className='sidebar-link group'
+                >
                   <div className='icon-style group-hover:bg-opacity-70 group-hover:scale-105'>
                     <AutoStoriesOutlined />
                   </div>
-                  <label className='label-style'>pagination</label>
-                </Link>
+                  <label className='label-style'>Pagination</label>
+                </a>
               </div>
             </li>
           </ul>

@@ -21,6 +21,7 @@ export default function ListWithPagination() {
       const response = await handlePageLoad(page); // 페이지 번호를 변경하여 원하는 페이지의 데이터를 가져올 수 있음
       if (response) {
         setLoadedData(response.data);
+        setLastPages(response.total);
         setLoading(false);
       }
     };
