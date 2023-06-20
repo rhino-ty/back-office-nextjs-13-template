@@ -18,6 +18,8 @@ export const handleLoginSubmit = async (email: string, password: string) => {
     if (response) {
       saveAccessTokenToLocalStorage(response.token);
       alert('성공!');
+    } else {
+      throw new Error('Network response was not ok');
     }
   } catch (error) {
     // 로그인 요청 실패

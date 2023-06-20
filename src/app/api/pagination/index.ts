@@ -8,6 +8,10 @@ export const handlePageLoad = async (
   try {
     const response = await fetchInstance<PageData>(`/users?page=${page}`);
 
+    if (!!!response) {
+      throw new Error('Network response was not ok');
+    }
+
     return response;
   } catch (error) {
     console.error(error);
