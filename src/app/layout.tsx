@@ -1,8 +1,8 @@
 import { Inter } from 'next/font/google';
 import Sidebar from '../layouts/sidebar/sidebar';
 import '../styles/globals.css';
-import ReduxProvider from './redux_provider';
-import { ThemeProviders } from './theme_providers';
+import ReduxProvider from '../libs/redux_provider';
+import { ThemeProviders } from '../libs/theme_providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
