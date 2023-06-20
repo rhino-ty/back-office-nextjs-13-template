@@ -1,28 +1,28 @@
-'use client';
 import { saveAccessTokenToLocalStorage } from '@/utils/acces_token_handler';
-import fetchInstance from '../index';
-
-interface LoginResponse {
-  token: string;
-}
+import { SERVER_URL } from '../';
 
 export const handleLoginSubmit = async (email: string, password: string) => {
   try {
-    const response = await fetchInstance<LoginResponse>('/login', {
+    const response = await fetch(`${SERVER_URL}/login`, {
       method: 'POST',
-      body: JSON.stringify({ email, password }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
     });
 
-    // 로그인 요청 성공
-    console.log(response);
-    if (response) {
-      saveAccessTokenToLocalStorage(response.token);
+    if (response.ok) {
+      const data = await response.json();
+      console.log(data);
+      saveAccessTokenToLocalStorage(data.token);
       alert('성공!');
     } else {
-      throw new Error('Network response was not ok');
+      throw new Error('로그인 요청 실패');
     }
   } catch (error) {
-    // 로그인 요청 실패
     console.error(error);
   }
 };

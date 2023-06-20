@@ -1,18 +1,11 @@
-'use client';
-import { PageData } from '@/types/pagination';
-import fetchInstance from '../index';
+import { SERVER_URL } from '../';
 
-export const handlePageLoad = async (
-  page: number
-): Promise<PageData | null> => {
+export const handlePageLoad = async (page: number) => {
   try {
-    const response = await fetchInstance<PageData>(`/users?page=${page}`);
+    const response = await fetch(`${SERVER_URL}/users?page=${page}`);
+    const data = await response.json();
 
-    if (!!!response) {
-      throw new Error('Network response was not ok');
-    }
-
-    return response;
+    return data;
   } catch (error) {
     console.error(error);
     return null;
