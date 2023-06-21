@@ -1,5 +1,5 @@
 'use client';
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent, Fragment, useEffect, useState } from 'react';
 import { handlePageLoad } from '../api/pagination';
 import Image from 'next/image';
 import { UserData } from '@/types/pagination';
@@ -42,7 +42,7 @@ export default function ListWithPagination() {
   // };
 
   return (
-    <div className=' flex flex-col justify-center items-center'>
+    <Fragment>
       {!loading && loadedData ? (
         <div className='w-full'>
           {/* 데이터를 사용하여 View에 필요한 내용을 배치하는 로직을 작성. */}
@@ -88,13 +88,13 @@ export default function ListWithPagination() {
           onChange={(e) => handlePage(e)}
         /> */}
         <Pagination
-          totalPage={10}
+          totalPage={20}
           // totalPage={totalPages}
           currentPage={page}
           setPage={(e) => setPage(e)}
         />
       </div>
-    </div>
+    </Fragment>
   );
 }
 
