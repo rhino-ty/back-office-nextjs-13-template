@@ -11,7 +11,7 @@ import {
   SwipeVerticalOutlined,
   AutoStoriesOutlined,
 } from '@mui/icons-material';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ThemeModeToggleButton from '../../components/theme_mode_toggle_button';
 import Drawer from './drawer';
 import './sidebar.css';
@@ -37,6 +37,15 @@ export default function Sidebar() {
   const handleDrawerMenuContent = (menuContent: string) => {
     setDrawerMenuSetting(menuContent);
   };
+
+  // prefetch 사용방법 : SSR할 필요가 없는 사이트거나 이벤트 중 페이지가 넘어가는 이벤트가 있다면 그 페이지에 prefetch를 걸면 된다.
+  // https://nextjs.org/docs/pages/api-reference/functions/use-router#routerprefetch : Pages Routre지만 App Router와 사용방법은 같다.
+  // useEffect(() => {
+  //   router.prefetch('/');
+  //   router.prefetch('/login');
+  //   router.prefetch('/modal');
+  //   router.prefetch('/toast');
+  // }, [router]);
 
   return (
     <>
