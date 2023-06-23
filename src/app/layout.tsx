@@ -1,8 +1,6 @@
 import { Inter } from 'next/font/google';
 import Sidebar from '../layouts/sidebar/sidebar';
 import '../styles/globals.css';
-import ReduxProvider from '../libs/redux_provider';
-import { ThemeProviders } from '../libs/theme_providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,12 +17,8 @@ export default function RootLayout({
   return (
     <html lang='en' className={inter.className}>
       <body>
-        <ReduxProvider>
-          <ThemeProviders>
-            <Sidebar />
-            <main className='ml-[88px] w-screen'>{children}</main>
-          </ThemeProviders>
-        </ReduxProvider>
+        <Sidebar />
+        <main className='ml-[88px] w-screen'>{children}</main>
       </body>
     </html>
   );
